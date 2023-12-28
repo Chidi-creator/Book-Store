@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import useSignup from "../Hooks/useSignup";
 import { useAuthContext } from "../Hooks/useAuthContext";
+import { Link } from "react-router-dom";
 
 
 const Signup = () => {
@@ -76,6 +77,12 @@ useEffect(() => {
             Sign Up
           </button>
         </form>
+         <p className="text-gray-600 text-sm mt-4">
+          Already have an account?{" "}
+          <Link to="/user/login" className="text-blue-500 hover:underline">
+          Log In
+          </Link>
+        </p>
       </div>
     </div>
     </div> );
